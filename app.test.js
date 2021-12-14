@@ -3,7 +3,8 @@ const {add}=require("./app")
 const {myArray}=require("./app")
 const {nullTest}=require("./app")
 const {truthyTest}=require("./app")
-const {notFalsy}=requires("./app")
+const {notFalsy}=require("./app")
+const {myCar}= require("./app")
 
 
 test ("2+3=5", ()=>{
@@ -29,4 +30,10 @@ test("Value should be truthy", ()=>{
 
 test("Value should not be falsy", ()=>{
     expect(notFalsy).not.toBeFalsy();
+})
+
+test ("Make and model inside of myCar should be Ford and Mustang",()=>{
+    expect(myCar.make).toBe('Ford');
+    expect(myCar.model).toBe('Mustang');
+
 })
